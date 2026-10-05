@@ -1,8 +1,13 @@
 export default function Extra() {
   return (
     <section className="section" id="extra" aria-labelledby="extra-title">
-      <div className="section-label">Más</div>
-      <h2 className="section-title" id="extra-title">Idiomas y otros</h2>
+      <div className="sec-head">
+        <span className="sec-num">06</span>
+        <div>
+          <p className="section-label">Más</p>
+          <h2 className="section-title" id="extra-title">Idiomas y otros</h2>
+        </div>
+      </div>
 
       <div className="lang-row" style={{ marginBottom: '1.5rem' }}>
         <div className="lang-chip">🇪🇸 Castellano — Nativo</div>

@@ -4,10 +4,13 @@
 export default function Experience() {
   return (
     <section className="section" id="exp" aria-labelledby="exp-title">
-      <div className="section-label">Trayectoria</div>
-      <h2 className="section-title" id="exp-title" style={{ margin: '0 0 2.5rem' }}>
-        Experiencia Laboral
-      </h2>
+      <div className="sec-head">
+        <span className="sec-num">02</span>
+        <div>
+          <p className="section-label">Trayectoria</p>
+          <h2 className="section-title" id="exp-title" style={{ margin: '0 0 2.5rem' }}>Experiencia Laboral</h2>
+        </div>
+      </div>
 
       <article className="card">
         <div className="card-header">

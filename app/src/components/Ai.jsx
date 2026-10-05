@@ -4,8 +4,13 @@
 export default function Ai() {
   return (
     <section className="section" id="ai" aria-labelledby="ai-title">
-      <div className="section-label">Diferencial</div>
-      <h2 className="section-title" id="ai-title">IA Aplicada</h2>
+      <div className="sec-head">
+        <span className="sec-num">04</span>
+        <div>
+          <p className="section-label">Diferencial</p>
+          <h2 className="section-title" id="ai-title">IA Aplicada</h2>
+        </div>
+      </div>
 
       <div className="ai-card" style={{ marginBottom: '1rem' }}>
         <p>
