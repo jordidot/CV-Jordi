@@ -2,30 +2,52 @@
 
 Currículum personal de **Jordi Serrano**, desarrollador Full Stack.
 
-## Contenido del repositorio
+Aplicación web hecha con **React 18 + Vite**. Cada sección del CV es un componente
+independiente, de modo que se puede editar o reutilizar por separado.
 
-| Archivo | Descripción |
-| --- | --- |
-| `index.html` | CV web interactivo. Página única con estilos propios y una escena 3D de Three.js. |
-| `CVJordi2025_final.pdf` | Versión en PDF del currículum. |
-| `CVJordi2025_final.docx` | Versión editable en Word del currículum. |
+## Estructura
 
-## Ver el CV web en local
-
-El `index.html` es una página estática, así que basta con abrirla en el navegador.
-Si prefieres servirlo por HTTP:
-
-```bash
-python -m http.server 8000
+```
+CV-Jordi/
+├─ app/                      código fuente (React + Vite)
+│  ├─ index.html             plantilla de Vite
+│  ├─ package.json
+│  ├─ vite.config.js         el build se genera en ../docs
+│  └─ src/
+│     ├─ main.jsx            punto de entrada
+│     ├─ App.jsx             compone las secciones
+│     ├─ components/         una sección por fichero
+│     │  ├─ Background.jsx   escena 3D de Three.js
+│     │  ├─ Hero.jsx
+│     │  ├─ Experience.jsx
+│     │  ├─ Skills.jsx
+│     │  ├─ Ai.jsx
+│     │  ├─ Education.jsx
+│     │  └─ Extra.jsx
+│     ├─ hooks/
+│     │  └─ useScrollReveal.js
+│     └─ styles/styles.css   estilos de toda la aplicación
+├─ docs/                     build publicado (no editar a mano)
+├─ CVJordi2025_final.pdf     versión en PDF del currículum
+├─ CVJordi2025_final.docx    versión editable en Word
+└─ informe_secciones.pdf     informe del rediseño por secciones
 ```
 
-Y abre <http://localhost:8000>.
+## Desarrollo
 
-### Dependencias externas
+```bash
+cd app
+npm install
+npm run dev        # servidor de desarrollo
+npm run build      # genera el sitio en ../docs
+npm run preview    # previsualiza el build
+```
 
-La página carga recursos desde CDN, por lo que necesita conexión a internet:
+`docs/` es la carpeta que se publica (por ejemplo con GitHub Pages).
 
-- [Three.js](https://threejs.org/) 0.164.1, vía jsDelivr (escena 3D del fondo).
-- Google Fonts: Inter y Space Grotesk.
+## Dependencias externas
 
-Sin conexión, el contenido y los estilos base se ven igualmente, pero no la animación 3D ni las tipografías.
+- **Three.js** 0.164.1: se instala con npm y queda dentro del bundle, ya no se carga por CDN.
+- **Google Fonts** (Inter y Space Grotesk): sí se cargan por CDN, por lo que se necesita
+  conexión a internet para ver las tipografías. Sin conexión el contenido se ve igual,
+  con la tipografía del sistema.
