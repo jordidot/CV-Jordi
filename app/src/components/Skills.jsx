@@ -1,8 +1,13 @@
 export default function Skills() {
   return (
     <section className="section" id="skills" aria-labelledby="skills-title">
-      <div className="section-label">Stack</div>
-      <h2 className="section-title" id="skills-title" style={{ marginTop: 0 }}>Tecnologías</h2>
+      <div className="sec-head">
+        <span className="sec-num">03</span>
+        <div>
+          <p className="section-label">Stack</p>
+          <h2 className="section-title" id="skills-title" style={{ marginTop: 0 }}>Tecnologías</h2>
+        </div>
+      </div>
 
       <div className="skills-grid">
         <div className="skill-group">

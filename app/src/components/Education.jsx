@@ -1,8 +1,13 @@
 export default function Education() {
   return (
     <section className="section" id="edu" aria-labelledby="edu-title">
-      <div className="section-label">Formación</div>
-      <h2 className="section-title" id="edu-title">Educación</h2>
+      <div className="sec-head">
+        <span className="sec-num">05</span>
+        <div>
+          <p className="section-label">Formación</p>
+          <h2 className="section-title" id="edu-title">Educación</h2>
+        </div>
+      </div>
 
       <p style={{ color: 'var(--muted)', fontSize: '13.5px', marginBottom: '1.5rem' }}>
         Mi formación técnica en software llegó después de nueve años en hostelería: primero un
