@@ -6,6 +6,7 @@ import Skills from './components/Skills.jsx';
 import Ai from './components/Ai.jsx';
 import Education from './components/Education.jsx';
 import Extra from './components/Extra.jsx';
+import Footer from './components/Footer.jsx';
 
 /**
  * Cada seccion es un componente independiente en src/components/.
@@ -17,13 +18,14 @@ export default function App() {
   return (
     <>
       <Background />
-      <div className="page">
+      <div className="page" id="top">
         <Hero />
         <Experience />
         <Skills />
         <Ai />
         <Education />
         <Extra />
+        <Footer />
       </div>
     </>
   );
